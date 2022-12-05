@@ -4,6 +4,20 @@
 
 std::array<float, 4> ParseQuaternion(std::string t_quaternion)
 {
+    
+   /*
+    *  parse the string form of a quaternion (ex."1 + 2i - 3j - 4k")
+    *  into a Quaternion Struct of coefficients(ex.[1 2 - 3 - 4]).
+    *
+    *  The quaternion string can be formatted in many different ways:
+    *      standard form: 1+2i-3j-4k
+    *      missing terms: 1-3k, 2i-4k
+    *      missing coefficients: i+j-k
+    *      It may not be in the right order: 2i-1+3k-4j
+    *      The coefficients may be integers or decimals: 7-2.4i+3.75j-4.0k
+    */
+    
+    
     // Store regex match Results
     std::smatch matches;
   
